@@ -19,13 +19,13 @@ const getAllCourses = async () => {
   }
   
   const createCourse = async (course : Course) => {
-    const rows = await dbc.qr(`INSERT INTO courses(id, name, description) VALUES(?, ?, ?);`, [course.id, course.name, course.description])
+    const rows = await dbc.qr(`INSERT INTO courses(id, Cname, description) VALUES(?, ?, ?);`, [course.id, course.name, course.description])
   
     return rows;
   }
 
   const putCourse = async (course : Course) => {
-    const rows = await dbc.qr(`UPDATE courses SET name=?, description=? WHERE id=?;`, [course.name, course.description, course.id])
+    const rows = await dbc.qr(`UPDATE courses SET Cname=?, description=? WHERE id=?;`, [course.name, course.description, course.id])
   
     return rows;
   }

@@ -16,11 +16,11 @@ const getCourses = async (req : Request, res : Response) => {
 }
 
 const addCourse = async (req : Request, res : Response) => {
-    const { name, description} = req.body;
+    const { Cname, description} = req.body;
 
     const courseNew : Course = {
         id: uuidv4(),
-        name: name,
+        name: Cname,
         description: description
     }
 

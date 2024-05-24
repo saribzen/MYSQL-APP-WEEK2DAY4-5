@@ -34,7 +34,10 @@ const signUp = async (name: string, email: String, pass: String, role: String, i
 
     return {
         success: true,
-        Userdata: { token: token },
+        Userdata: { 
+            token: token,
+            id: user.id,
+         },
     }
 }
 
@@ -59,7 +62,10 @@ const signIn = async (email: String, pass : String, isStudent: boolean) => {
 
     return {
         success: true,
-        Userdata: { token: token },
+        Userdata: { 
+            token: token,
+            id: data[0].id,
+         },
     }
 }
 

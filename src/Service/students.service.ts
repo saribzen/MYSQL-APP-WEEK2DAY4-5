@@ -27,7 +27,7 @@ const getStudentByEmail = async (email: String) => {
 }
 
 const createStudent = async (user: user) => {
-  const rows = await db.qr(`INSERT INTO students(id, name, email, pass, role) VALUES(?, ?, ?, ?, ?)`, [user.id, user.name, user.email, user.pass, user.role])
+  const rows = await db.qr(`INSERT INTO students(id, Sname, email, pass, role) VALUES(?, ?, ?, ?, ?)`, [user.id, user.name, user.email, user.pass, user.role])
 
   return rows;
 }
